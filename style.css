@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+* {
+  user-select: none;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  border: none;
+  background-color: #0f172a;
+}
+
+#input:focus {
+  outline: none;
+}
+
+* {
+  font-family: "DM Sans", sans-serif;
+}
+
+#subtitle {
+  color: white;
+}
+
+#queryInput {
+  width: 96.5%;
+  height: 200px; /* Adjust this value as needed */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  background-color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.buttons-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column; /* Changed from row to column */
+  justify-content: space-between;
+}
+
+.buttons-section button,
+.buttons-section select {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  font-size: 20px;
+  background-color: #1e293b;
+}
+
+button:hover {
+  outline: 2px solid black;
+}
+
+button:active {
+  background-color: gray;
+}
+
+#main {
+  width: 700px;
+  min-height: 500px;
+  padding: 7%;
+  overflow: auto;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+#result {
+  color: #fff;
+  overflow-y: scroll;
+}
+
+#footer {
+  color: #fff;
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+#loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.key {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  color: #fff;
+}
