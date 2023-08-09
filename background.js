@@ -14,6 +14,6 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     };
     xhr.send(request.data);
   
-    return true;  // This is required by Chrome to indicate this call is asynchronous
+    return true; 
   });
   
