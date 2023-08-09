@@ -27,17 +27,28 @@ html {
 
 #queryInput {
   width: 96.5%;
-  height: 200px; /* Adjust this value as needed */
+  height: 200px;
   border: none;
   border-radius: 5px;
-  color: white;
+  color: #fff;
   padding: 10px;
   font-size: 15px;
   background-color: #1e293b;
   margin-bottom: 20px;
 }
 
+#things {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#storage {
+  width: 40%;
+}
+
 .buttons-section {
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -45,7 +56,7 @@ html {
 
 #menu {
   display: flex;
-  flex-direction: column; /* Changed from row to column */
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -62,6 +73,11 @@ button {
   padding: 5px;
   font-size: 20px;
   background-color: #1e293b;
+}
+
+things {
+  display: flex;
+  flex-direction: row;
 }
 
 button:hover {
