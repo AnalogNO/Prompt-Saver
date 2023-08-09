@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("#saveBtn").addEventListener('click', onClickSave);
   document.querySelector("#loadBtn").addEventListener('click', onClickLoad);
   document.querySelector("#renameBtn").addEventListener('click', onClickRename);
+  document.querySelector("#deleteBtn").addEventListener('click', onClickDelete);
   document.querySelector("#loading").style.display = "none";
   var savedInputs = JSON.parse(localStorage.getItem('savedInputs')) || [];
   updateSavedInputsDropdown(savedInputs);
