@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function onClickSubmit() {
-  // Your original submit button click logic goes here...
   var queryInput = document.querySelector("#queryInput").value;
 
   if (localStorage.getItem("key") === null) {
@@ -53,7 +52,6 @@ function onClickSubmit() {
 }
 
 function onClickKey() {
-  // Your original key button click logic goes here...
   var key = prompt(
     "Enter your OpenAI API key. You can find it at https://beta.openai.com/account/api-keys"
   );
@@ -71,7 +69,6 @@ function onClickKey() {
 }
 
 function onClickSave() {
-  // Your original save button click logic goes here...
   var query = document.getElementById('queryInput').value;
   var savedInputs = JSON.parse(localStorage.getItem('savedInputs')) || [];
   var name = prompt('Enter a name for this input:', query);
@@ -83,7 +80,6 @@ function onClickSave() {
 }
 
 function onClickLoad() {
-  // Your original load button click logic goes here...
   var savedInputsDropdown = document.getElementById('savedInputs');
   var selectedIndex = savedInputsDropdown.selectedIndex;
   if (selectedIndex >= 0) {
@@ -93,7 +89,6 @@ function onClickLoad() {
 }
 
 function onClickRename() {
-  // Your original rename button click logic goes here...
   var savedInputsDropdown = document.getElementById('savedInputs');
   var selectedIndex = savedInputsDropdown.selectedIndex;
   if (selectedIndex >= 0) {
@@ -107,14 +102,27 @@ function onClickRename() {
   }
 }
 
+function onClickDelete() {
+  var savedInputsDropdown = document.getElementById('savedInputs');
+  var selectedIndex = savedInputsDropdown.selectedIndex;
+  if (selectedIndex >= 0) {
+    var confirmation = confirm('Are you sure you want to delete this item?');
+    if (confirmation) {
+      var savedInputs = JSON.parse(localStorage.getItem('savedInputs')) || [];
+      savedInputs.splice(selectedIndex, 1);
+      localStorage.setItem('savedInputs', JSON.stringify(savedInputs));
+      updateSavedInputsDropdown(savedInputs);
+    }
+  }
+}
+
 function updateSavedInputsDropdown(savedInputs) {
-  // Your original updateSavedInputsDropdown function logic goes here...
   var dropdown = document.getElementById('savedInputs');
   dropdown.innerHTML = '';
   for (var i = 0; i < savedInputs.length; i++) {
       var option = document.createElement('option');
       option.text = savedInputs[i].name;
-      option.value = i;  // Store the index of the input in the value property
+      option.value = i; 
       dropdown.add(option);
   }
 }
