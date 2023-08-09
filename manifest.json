@@ -1,10 +1,14 @@
 {
   "manifest_version": 2,
   "name": "Prompt Saver",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Promptly Saves your prompts!",
   "background": {
     "scripts": ["background.js"]
+  },
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
   },
   "permissions": [
     "http://*/*",
