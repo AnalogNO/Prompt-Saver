@@ -1,6 +1,6 @@
 # Prompt-Saver
 
-It's a very simple program for saving prompts to then use later.
+Save ChatGPT prompts to use in a Firefox / Chrome extention.
 
 Writen mostly by Chat GPT-4 code interpreter and then slightly edited by me.
 
